@@ -1,0 +1,31 @@
+
+[
+  {
+    "id": 1,
+    "nombre": "Corte Simple",
+    "descripcion": "Corte básico con tijera o máquina",
+    "precio": 15,
+    "duracion": "30 min"
+  },
+  {
+    "id": 2,
+    "nombre": "Lavado de Cabello",
+    "descripcion": "Lavado y acondicionado",
+    "precio": 8,
+    "duracion": "15 min"
+  },
+  {
+    "id": 3,
+    "nombre": "Color",
+    "descripcion": "Aplicación de color completo",
+    "precio": 45,
+    "duracion": "90 min"
+  },
+  {
+    "id": 4,
+    "nombre": "Afeitado",
+    "descripcion": "Afeitado profesional con navaja",
+    "precio": 12,
+    "duracion": "20 min"
+  }
+]

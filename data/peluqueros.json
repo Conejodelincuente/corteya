@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carlos Ruiz",
+    "especialidad": "Cortes clásicos y Lavado",
+    "serviciosHabilitados": [1, 2],
+    "foto": "../assets/perfil-1.jpeg",
+    "diasLaborales": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
+    "calificacion": "4.6"
+  },
+  {
+    "id": 2,
+    "nombre": "Javier López",
+    "especialidad": "Experto en Barba y Degradados",
+    "serviciosHabilitados": [1, 2, 4],
+    "foto": "./assets/perfil-2.jpeg",
+    "diasLaborales": ["Martes", "Miércoles", "Jueves", "Viernes", "Sábado"],
+    "calificacion": "4.5"
+  },
+  {
+    "id": 3,
+    "nombre": "Andrés Silva",
+    "especialidad": "Especialista en Color y Estilo",
+    "serviciosHabilitados": [1, 2, 3],
+    "foto": "./assets/perfil-3.jpeg",
+    "diasLaborales": ["Lunes", "Miércoles", "Viernes", "Sábado"],
+    "calificacion": "4.9"
+  },
+  {
+    "id": 4,
+    "nombre": "Miguel Torres",
+    "especialidad": "Barbería Tradicional",
+    "serviciosHabilitados": [1, 2, 4],
+    "foto": "./assets/perfil-4.jpeg",
+    "diasLaborales": ["Jueves", "Viernes", "Sábado"],
+    "calificacion": "4.3"
+  }
+]

@@ -1,0 +1,136 @@
+
+/* COMUNES */
+
+/* Botones */
+
+#btn-confirmar{
+    width: 100%;
+    background-color: var(--color-disable);
+    border: none;
+    border-radius: var(--radius-s);
+    padding: var(--spacing-s);
+    font-size: var(--text-s);
+    cursor: pointer;
+}
+
+
+/* Tarjetas de Servicios */
+
+.card-servicio {
+    width:250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-m);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.card-servicio:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-dark);
+}
+.card-servicio.selected {
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-blue);
+}
+.card-servicio-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.card-servicio-titulo {
+    font-size: var(--title-s);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.card-servicio-precio {
+    font-size: var(--title-s);
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.card-servicio-descripcion {
+    font-size: var(--text-s);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-s);
+}
+
+.card-servicio-duracion {
+    font-size: var(--text-xs);
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+
+/* Tarjetas de Peluqueros */
+
+.card-peluquero {
+    background-color: var(--color-bg-card);
+    border: 1px solid transparent;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-m);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+.card-peluquero:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-dark);
+}
+
+.card-peluquero.selected {
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-blue);
+}
+.card-peluquero-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-s);
+}
+.card-peluquero p{
+    color: var(--color-secondary);
+}
+
+
+/* Sección resumen de compra */
+
+.sidebar-resumen{
+    position: sticky;
+    top: var(--spacing-m);
+    height: fit-content;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-m);
+}
+#detalle-resumen{
+    text-align: start;
+    padding: var(--spacing-s);
+    color: var(--color-text);
+}
+
+@media (max-width: 856px) {
+    .main-layout {
+        grid-template-columns: 1fr;}
+
+    .cart-sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: var(--radius-m) var(--radius-m) 0 0;
+        z-index: 100;
+    }
+}
