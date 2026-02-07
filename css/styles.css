@@ -117,60 +117,14 @@ p{font-size: 12px;font-weight: 400;}
 }
 
 
-/* Servicios */
+/* Botones */
 
-#lista-servicios{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-s);
-}
-
-/*  Peluqueros */
-
-#lista-peluqueros {
-    padding: var(--spacing-m);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-m);
-}
-
-
-/* Footer */
-
-.main-footer{
-    color: var(--color-text-alternative);
-    background-color:var(--color-bg-dark);
-    margin-top: var(--spacing-l);
-    padding: var(--spacing-l) 0;
-}
-.footer-content{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-l);
-}
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-m);
-    }
-}
-
-
-.footer-content h4{
-    margin-bottom: var(--spacing-m);
-    font-size: var(--text-m);
-    font-weight: 500;
-}
-.footer-list {
-    list-style: none;
-    padding: 0;
-}
-.footer-social{
-    text-align: end;
-}
-.footer-social  img{
-    width: 1.5rem;
-    vertical-align: middle;
-    margin-left: var(--spacing-m);
+#btn-confirmar{
+    width: 100%;
+    background-color: var(--color-disable);
+    border: none;
+    border-radius: var(--radius-s);
+    padding: var(--spacing-s);
+    font-size: var(--text-s);
+    cursor: pointer;
 }

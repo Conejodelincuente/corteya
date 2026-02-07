@@ -17,7 +17,7 @@ function generarDias(){
     const contenedorFechas = document.getElementById('selector-fecha');
     contenedorFechas.innerHTML = '';
 
-const hoy = new Date();  // funcion nativa de JS
+    const hoy = new Date();  // funcion nativa de JS
 
     // Sumamos i días a la fecha actual
     for (let i = 0; i < 7; i++) {
@@ -44,7 +44,7 @@ const hoy = new Date();  // funcion nativa de JS
 
         contenedorFechas.appendChild(btnDia);
     }
-
+}
 // Función de la selección de Día
 
     function seleccionarFecha(objetoFecha, diaString, botonFecha){
@@ -67,7 +67,6 @@ const hoy = new Date();  // funcion nativa de JS
         mostrarHorarios();
     }
   }
-}
 
     //-------------------------------------------------
     //funcion de la seleccion de Hora

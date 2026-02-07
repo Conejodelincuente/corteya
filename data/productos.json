@@ -1,0 +1,50 @@
+[
+  {
+    "id": 101,
+    "nombre": "Cera Mate Texturizante",
+    "descripcion": "Fijación media y acabado mate para un look natural durante todo el día.",
+    "precio": 1500,
+    "categoria": "peinado",
+    "imagen": "./assets/cera.jpg"
+  },
+  {
+    "id": 102,
+    "nombre": "Pomada Brillo Intenso",
+    "descripcion": "Pomada de alta fijación con acabado brillante para estilos más clásicos.",
+    "precio": 1700,
+    "categoria": "peinado",
+    "imagen": "./assets/pomada.jpg"
+  },
+  {
+    "id": 103,
+    "nombre": "Aceite para Barba Clásico",
+    "descripcion": "Hidratación profunda con aroma amaderado. Ideal para barbas medias y largas.",
+    "precio": 1900,
+    "categoria": "barba",
+    "imagen": "./assets/aceite-barba.png"
+  },
+  {
+    "id": 104,
+    "nombre": "Bálsamo Suavizante de Barba",
+    "descripcion": "Controla el frizz y suaviza la barba sin dejar sensación grasosa.",
+    "precio": 2100,
+    "categoria": "barba",
+    "imagen": "./assets/balsamo.jpg"
+  },
+  {
+    "id": 105,
+    "nombre": "Shampoo para Cabello Diario",
+    "descripcion": "Limpieza suave para uso diario, cuida el cuero cabelludo.",
+    "precio": 1300,
+    "categoria": "cuidado capilar",
+    "imagen": "./assets//shampoo-1.jpg"
+  },
+  {
+    "id": 106,
+    "nombre": "Shampoo para Barba",
+    "descripcion": "Especial para barba, limpia sin resecar y respeta la piel.",
+    "precio": 1600,
+    "categoria": "barba",
+    "imagen": "./assets//shampoo-2.jpg"
+  }
+]

@@ -1,0 +1,249 @@
+
+/*--------------------------------------------------
+/* Tarjetas de Servicios */
+#lista-servicios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-s);
+}
+.card-servicio {
+    width:250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-m);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.card-servicio:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-dark);
+}
+.card-servicio.selected {
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-blue);
+}
+.card-servicio-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.card-servicio-titulo {
+    font-size: var(--title-s);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.card-servicio-precio {
+    font-size: var(--title-s);
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.card-servicio-descripcion {
+    font-size: var(--text-s);
+    color: var(--color-secondary);
+    margin-bottom: var(--spacing-s);
+}
+
+.card-servicio-duracion {
+    font-size: var(--text-xs);
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/*--------------------------------------------------
+/* Tarjetas de Peluqueros */
+#lista-peluqueros {
+    padding: var(--spacing-m);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-m);
+}
+.card-peluquero {
+    background-color: var(--color-bg-card);
+    border: 1px solid transparent;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-m);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+}
+.card-peluquero:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-dark);
+}
+
+.card-peluquero.selected {
+    border-color: var(--color-primary);
+    background-color: var(--color-bg-blue);
+}
+.card-peluquero-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: var(--spacing-s);
+}
+.card-peluquero p{
+    color: var(--color-secondary);
+}
+
+/*--------------------------------------------------
+/* Sección resumen de compra */
+
+.sidebar-resumen{
+    position: sticky;
+    top: var(--spacing-m);
+    height: fit-content;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-m);
+}
+#detalle-resumen{
+    text-align: start;
+    padding: var(--spacing-s);
+    color: var(--color-text);
+}
+
+@media (max-width: 850px) {
+    .main-layout {
+        grid-template-columns: 1fr;}
+
+    .cart-sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: var(--radius-m) var(--radius-m) 0 0;
+        z-index: 100;
+    }
+}
+
+/*--------------------------------------------------
+/* fecha */
+
+#selector-fecha {
+    display: flex;
+    gap: var(--spacing-m);
+    padding: var(--spacing-s) 0;
+    margin-bottom: var(--spacing-l);
+    overflow-x: auto;
+}
+.dia-calendario{
+    flex: 1;
+    min-width: 70px;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: var(--radius-m);
+    padding: var(--spacing-m);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.dia-calendario.selected {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/*--------------------------------------------------*/
+/* hora */
+
+#grid-horarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--spacing-s);
+}
+
+.horario-item {
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    border-radius: var(--radius-s);
+    padding: var(--spacing-s);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.horario-item.selected {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/*--------------------------------------------------*/
+/* Productos */
+
+#lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-m);
+}
+
+.card-producto {
+    border: 1px solid #eee;
+    padding: var(--spacing-s);
+    text-align: center;
+    border-radius: var(--radius-m);
+}
+
+.card-producto img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: var(--spacing-s);
+}
+
+
+
+/*--------------------------------------------------*/
+/* Footer */
+
+.main-footer{
+    color: var(--color-text-alternative);
+    background-color:var(--color-bg-dark);
+    margin-top: var(--spacing-l);
+    padding: var(--spacing-l) 0;
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-l);
+}
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-m);
+    }
+}
+
+.footer-content h4{
+    margin-bottom: var(--spacing-m);
+    font-size: var(--text-m);
+    font-weight: 500;
+}
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+.footer-social{
+    text-align: end;
+}
+.footer-social  img{
+    width: 1.5rem;
+    vertical-align: middle;
+    margin-left: var(--spacing-m);
+}

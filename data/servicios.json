@@ -18,14 +18,28 @@
     "id": 3,
     "nombre": "Color",
     "descripcion": "Aplicación de color completo",
-    "precio": 45,
+    "precio": 35,
     "duracion": "90 min"
   },
   {
     "id": 4,
     "nombre": "Afeitado",
     "descripcion": "Afeitado profesional con navaja",
-    "precio": 12,
+    "precio": 10,
     "duracion": "20 min"
+  },
+  {
+    "id": 5,
+    "nombre": "Delineado de cejas",
+    "descripcion": "Recorte y delineado de las cejas",
+    "precio": 15,
+    "duracion": "15 min"
+  },
+  {
+    "id": 6,
+    "nombre": "Cambio de Look",
+    "descripcion": "Cambio de imagen total",
+    "precio": 50,
+    "duracion": "90 min"
   }
 ]

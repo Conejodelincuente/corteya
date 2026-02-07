@@ -32,7 +32,7 @@ function actualizarResumen() {
     resumen.innerHTML = contenidoHtml;
 
     //logica del botón
-    if (carritoTurnos.servicio && carritoTurnos.peluquero) { // añadir fecha y hora
+    if (carritoTurnos.servicio && carritoTurnos.peluquero && carritoTurnos.fecha && carritoTurnos.hora) { // añadir fecha y hora
             boton.disabled = false;
             boton.textContent = 'Confirmar Reserva';
             boton.style.backgroundColor = 'var(--color-primary)';
