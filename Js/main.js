@@ -1,4 +1,4 @@
-// ========== CARGA INICIAL ==========
+// carga de funciones principales
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,4 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     generarDias();
     mostrarHorarios()
     cargarProductos()
+
+
+    const btnLimpiar = document.getElementById('btn-limpiar');
+    if (btnLimpiar) {
+        btnLimpiar.addEventListener('click', limpiarCarrito);
+    }
 });

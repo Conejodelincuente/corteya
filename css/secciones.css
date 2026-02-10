@@ -116,6 +116,12 @@
     padding: var(--spacing-s);
     color: var(--color-text);
 }
+#detalle-resumen ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
 
 @media (max-width: 850px) {
     .main-layout {
@@ -194,6 +200,9 @@
 }
 
 .card-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #eee;
     padding: var(--spacing-s);
     text-align: center;
@@ -206,7 +215,19 @@
     object-fit: contain;
     margin-bottom: var(--spacing-s);
 }
-
+.card-producto button{
+    background-color:var(--color-primary);
+    border: none;
+    padding: var(--spacing-s);
+    border-radius: var(--radius-s);
+    color: var(--color-text-alternative);
+    margin-top: var(--spacing-m);
+}
+.card-producto p {
+    font-size: var(--text-m);
+    color: var(--color-primary);
+    font-weight: bold;
+}
 
 
 /*--------------------------------------------------*/

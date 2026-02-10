@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CorteYa - turnos de barberia</title>
+    <link rel="shortcut icon" href="./assets/coerteya.ico" type="image/x-icon">
 
     <!-- estilos de css -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -66,7 +67,8 @@
             <div id="detalle-resumen">
             <!-- lo que el usuario elija -->
             </div>
-            <button id="btn-confirmar" disabled>Seleciona los servicios</button>
+            <button id="btn-confirmar" class="btn-confirmar" disabled>Confirmar turno</button>
+            <button id="btn-limpiar" class="btn-limpiar"> Limpiar el carrito</button>
         </aside>
     </section>
 </main>
@@ -99,6 +101,8 @@
         </div>
     </section>
 </footer>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./js/alertas.js"></script>
 <script src="./js/carrito.js"></script>
 <script src="./js/servicios.js"></script>
 <script src="./js/peluqueros.js"></script>

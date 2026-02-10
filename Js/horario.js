@@ -52,12 +52,12 @@ function generarDias(){
             btn.classList.remove('selected');
         });
         botonFecha.classList.add('selected');
-        carritoTurnos.fecha = objetoFecha.toLocaleDateString('es-ES', { day: 'numeric', month: 'long' });
+        carrito.fecha = objetoFecha.toLocaleDateString('es-ES', { day: 'numeric', month: 'long' });
         actualizarResumen();
 
         // Filtrar peluqueros por servicio
-    if (carritoTurnos.peluquero) {
-        if (carritoTurnos.peluquero.diasLaborales.includes(diaString)) {
+    if (carrito.peluquero) {
+        if (carrito.peluquero.diasLaborales.includes(diaString)) {
             mostrarHorarios();
         } else {
             document.getElementById('grid-horarios').innerHTML =
@@ -93,6 +93,6 @@ function seleccionarHorario(hora, botonHora) {
     });
 
     botonHora.classList.add('selected');
-    carritoTurnos.hora = hora;
+    carrito.hora = hora;
     actualizarResumen();
 }

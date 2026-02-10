@@ -40,7 +40,7 @@ function seleccionarPeluquero(peluquero, cardElement){
         card.classList.remove('selected');
     });
     cardElement.classList.add('selected');
-    carritoTurnos.peluquero = peluquero;
+    carrito.peluquero = peluquero;
     actualizarResumen();
 
     // Filtrar servicios que hace el peluquero

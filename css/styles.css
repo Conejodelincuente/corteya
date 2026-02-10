@@ -122,9 +122,24 @@ p{font-size: 12px;font-weight: 400;}
 #btn-confirmar{
     width: 100%;
     background-color: var(--color-disable);
-    border: none;
+    border: 1px solid var(--color-disable);
     border-radius: var(--radius-s);
     padding: var(--spacing-s);
     font-size: var(--text-s);
+    cursor: pointer;
+}
+btn-confirmar[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-limpiar {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-disable);
+    border-radius: var(--radius-s);
     cursor: pointer;
 }

@@ -23,20 +23,15 @@ function mostrarProductos(arrayProductos) {
             <img src="${producto.imagen}" alt="${producto.nombre}">
             <h4>${producto.nombre}</h4>
             <p>$${producto.precio}</p>
-            <button onclick="agregarProductoAlCarrito(${producto.id})">Agregar</button>
-        `;
+            `;
+
+    const boton = document.createElement('button');
+    boton.textContent = 'Añadir producto';
+    boton.addEventListener('click', ()=>{
+        agregarProductoAlCarrito(producto);
+    });
+        card.appendChild(boton);
         contenedor.appendChild(card);
     });
 }
 
-function agregarProductoAlCarrito(id) {
-    const producto = productos.find(p => p.id === id);
-
-    if (!carritoTurnos.productos) {
-        carritoTurnos.productos = [];
-    }
-
-    carritoTurnos.productos.push(producto);
-    console.log("Producto agregado:", producto.nombre);
-    actualizarResumen();
-}

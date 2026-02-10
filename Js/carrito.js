@@ -1,4 +1,4 @@
-let carritoTurnos = {
+let carrito = {
     servicio: null,
     peluquero: null,
     fecha: null,
@@ -15,24 +15,44 @@ function actualizarResumen() {
     //logica del texto
     let contenidoHtml = '';
 
-    if (carritoTurnos.servicio) {
+    if (carrito.servicio) {
         contenidoHtml += `
             <div style="text-align: left; color: var(--color-text);">
-                <p><strong>Servicio:</strong> ${carritoTurnos.servicio.nombre}</p>
-                <p><strong>Precio:</strong> $${carritoTurnos.servicio.precio}</p>
-                <p><strong>Duración:</strong> ${carritoTurnos.servicio.duracion}</p>
+                <p><strong>Servicio:</strong> ${carrito.servicio.nombre}</p>
+                <p><strong>Precio:</strong> $${carrito.servicio.precio}</p>
+                <p><strong>Duración:</strong> ${carrito.servicio.duracion}</p>
             </div>
         `;
-    if (carritoTurnos.peluquero){
+    if (carrito.peluquero){
         contenidoHtml += `
-        <p><strong>Peluquero:</strong> ${carritoTurnos.peluquero.nombre}</p>
-        `;
+            <p><strong>Peluquero:</strong> ${carrito.peluquero.nombre}</p>
+            `;
     }
+    if (carrito.fecha){
+        contenidoHtml += `
+            <p><strong>Fecha:</strong> ${carrito.fecha}</p>
+            `;
+    }
+    if (carrito.hora){
+        contenidoHtml += `
+            <p><strong>Hora:</strong> ${carrito.hora}</p>
+            `;
+    }
+    if (carrito.productos.length > 0) {
+            contenidoHtml += `<p><strong>Productos:</strong></p><ul>`;
+            carrito.productos.forEach(prod => {
+            contenidoHtml += `<li>${prod.nombre} x${prod.cantidad} - $${prod.precio * prod.cantidad}</li>`;
+            });
+            contenidoHtml += `</ul>`;
+        }
+
     contenidoHtml += `</div>`;
     resumen.innerHTML = contenidoHtml;
 
+
     //logica del botón
-    if (carritoTurnos.servicio && carritoTurnos.peluquero && carritoTurnos.fecha && carritoTurnos.hora) { // añadir fecha y hora
+
+    if (carrito.servicio && carrito.peluquero && carrito.fecha && carrito.hora) {
             boton.disabled = false;
             boton.textContent = 'Confirmar Reserva';
             boton.style.backgroundColor = 'var(--color-primary)';
@@ -42,5 +62,38 @@ function actualizarResumen() {
             }
     } else {
         resumen.innerHTML = '<p style="color: var(--color-disable);">Selecciona un servicio para comenzar</p>';
+        boton.disabled = true;
+        boton.textContent = 'Completa todos los datos';
     }
 }
+
+function agregarProductoAlCarrito(producto) {
+    const existe = carrito.productos.find(p => p.id === producto.id);
+
+    if (existe) {
+        existe.cantidad++;
+    } else {
+        carrito.productos.push({
+            ...producto,
+            cantidad: 1
+        });
+    }
+
+    actualizarResumen();
+    console.log('Productos en carrito:', carrito.productos);
+}
+
+
+
+function limpiarCarrito() {
+    carrito = {
+        servicio: null,
+        peluquero: null,
+        fecha: null,
+        hora: null,
+        productos: []
+    };
+    actualizarResumen();
+    swal("Carrito limpio!", "... elige tu servicio y tu peluquero.");
+}
+

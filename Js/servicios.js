@@ -48,7 +48,7 @@ function seleccionarServicio(servicio, cardElement) {
     });
     cardElement.classList.add('selected');
     // actualizar el carrito
-    carritoTurnos.servicio = servicio;
+    carrito.servicio = servicio;
     actualizarResumen();
 
     // Filtrar peluqueros por servicio
