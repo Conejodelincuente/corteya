@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnLimpiar = document.getElementById('btn-limpiar');
     if (btnLimpiar) {
-        btnLimpiar.addEventListener('click', limpiarCarrito);
+        btnLimpiar.addEventListener('click', ()=>limpiarCarrito());
     }
 });

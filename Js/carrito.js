@@ -41,7 +41,7 @@ function actualizarResumen() {
     if (carrito.productos.length > 0) {
             contenidoHtml += `<p><strong>Productos:</strong></p><ul>`;
             carrito.productos.forEach(prod => {
-            contenidoHtml += `<li>${prod.nombre} x${prod.cantidad} - $${prod.precio * prod.cantidad}</li>`;
+            contenidoHtml += `<li class="producto-item">${prod.nombre} x${prod.cantidad} - $${prod.precio * prod.cantidad} <button class="btn-remover-producto" data-id="${prod.id}"> x </button></li>`;
             });
             contenidoHtml += `</ul>`;
         }
@@ -80,12 +80,12 @@ function agregarProductoAlCarrito(producto) {
     }
 
     actualizarResumen();
-    console.log('Productos en carrito:', carrito.productos);
+
 }
 
 
 
-function limpiarCarrito() {
+function limpiarCarrito(sinAlerta = false) {
     carrito = {
         servicio: null,
         peluquero: null,
@@ -93,7 +93,34 @@ function limpiarCarrito() {
         hora: null,
         productos: []
     };
+    // limpiar clases visuales seleccionadas
+
+    const seleccionados = document.querySelectorAll('.selected');
+    seleccionados.forEach(el => el.classList.remove('selected'));
+
     actualizarResumen();
-    swal("Carrito limpio!", "... elige tu servicio y tu peluquero.");
+
+    if(!sinAlerta){
+        swal("Carrito limpio!", "... elige tu servicio y tu peluquero.");
+    }
+}
+
+//elimninar producto del carrito
+
+document.addEventListener('DOMContentLoaded', () => {
+    const resumen = document.getElementById('detalle-resumen');
+
+    resumen.addEventListener('click', (eliminarprod) => {
+        if (eliminarprod.target.classList.contains('btn-remover-producto')) {
+            const id = Number(eliminarprod.target.dataset.id);
+            eliminarProducto(id);
+        }
+    });
+});
+
+
+function eliminarProducto(id) {
+    carrito.productos = carrito.productos.filter(prod => prod.id !== id);
+    actualizarResumen();
 }
 

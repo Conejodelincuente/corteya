@@ -20,7 +20,10 @@ function mostrarServicios(arrayServicios) {
     contenedor.innerHTML = '';
     arrayServicios.forEach(servicio => {
         const card = document.createElement('div');
-        card.className = 'card-servicio';
+        // verificacion de seleccion
+        const estaSeleccionado =carrito.servicio && carrito.servicio.id === servicio.id;
+        card.className = `card-servicio ${estaSeleccionado ? 'selected' : ''}`; // si coincide el id se añade 'selected'
+
         card.dataset.id = servicio.id;
         card.innerHTML = `
             <div class="card-servicio-header">

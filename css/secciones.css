@@ -122,6 +122,22 @@
     margin: 0;
     font-size: 12px;
 }
+.producto-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.btn-remover-producto {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--color-secondary);
+    transition: transform 0.2s ease;
+}
+
 
 @media (max-width: 850px) {
     .main-layout {

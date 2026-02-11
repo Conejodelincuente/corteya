@@ -4,7 +4,7 @@
     "nombre": "Carlos Ruiz",
     "especialidad": "Cortes clásicos y Lavado",
     "serviciosHabilitados": [1, 2,6,5],
-    "foto": "../assets/perfil-1.jpeg",
+    "foto": "./assets/perfil-1.jpeg",
     "diasLaborales": ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"],
     "calificacion": "4.6"
   },

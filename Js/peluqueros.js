@@ -19,7 +19,9 @@ function mostrarPeluqueros(arrayPeluqueros){
     contenedor.innerHTML = '';
     arrayPeluqueros.forEach(peluqueros =>{
     const card = document.createElement('div');
-    card.className = "card-peluquero";
+    // verificacion de seleccion
+    const esSeleccionado = carrito.peluquero && carrito.peluquero.id === peluquero.id;
+    card.className = `card-peluquero ${esSeleccionado ? 'selected' : ''}`;  // si coincide el id se añade 'selected'
     card.dataset.id = peluqueros.id;
     card.innerHTML = `
         <img class="card-peluquero-img" src="${peluqueros.foto}" alt="foto del peluquero">
